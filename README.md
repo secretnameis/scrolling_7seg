@@ -98,7 +98,7 @@ Odkaz: [top.bit](https://github.com/secretnameis/scrolling_7seg/blob/main/projec
 
 ## Video
 
-Write your text here
+[videoprezentace](https://drive.google.com/file/d/1ozr-5tpLP53XEPmy0LyffFDvKVfrevRT/view)
 
 <a name="references"></a>
 
