@@ -36,7 +36,7 @@ V projektu jsou z velké části využity ukázkové moduly z hodin počítačov
 
 ### 7-seg display driver
 Slouží k zobrazování znaků na displeji. Jako vstup mu slouží 32bit pole (data_i), které získá od shift_array.
-K aktualizaci hodnot jednotlivých displejů dochází postupně (7-,) a jejich výběr probíhá pomocí 3bit čítače, kdy každý displej má přiřazeno vlastní číslo.
+K aktualizaci hodnot jednotlivých displejů dochází postupně (7-0) a jejich výběr probíhá pomocí 3bit čítače, kdy každý displej má přiřazeno vlastní číslo.
 
 Odkaz na kód: [driver_7seg_8digits](https://github.com/secretnameis/scrolling_7seg/blob/main/project_3/project_3.srcs/sources_1/new/driver_7seg_4digits.vhd)
 
