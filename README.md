@@ -76,6 +76,7 @@ Například x"6" == "0100000" zobrazí na displeji číslo 6.
 
 Odkaz na kód: [hex_7seg](https://github.com/secretnameis/scrolling_7seg/blob/main/project_3/project_3.srcs/sources_1/new/hex_7seg.vhd)
 
+![table](images/table.PNG)
 
 <a name="top"></a>
 
