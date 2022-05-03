@@ -20,7 +20,7 @@
 <a name="objectives"></a>
 
 ## Cíl projektu
-Cílem projektu je zobrazit na 7-segmentových displejích běžící text. Využijeme k tomu posuvný registr (shift array), který vždy po nastavené době posune obsah registru o jeden znak.
+Cílem projektu je zobrazit na 7-segmentových displejích běžící text. Využijeme k tomu posuvné pole (shift array), které vždy po nastavené době posune obsah pole o jeden znak.
 
 <a name="hardware"></a>
 
