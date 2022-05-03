@@ -2,10 +2,10 @@
 
 ### Členové týmu
 
-* Member 1 (implementace shift_array)
-* Member 2 (simulace)
-* Member 3 (debug)
-* Member 4 (github odborník :D )
+* Ondřej Kudela   (implementace shift_array)
+* Daniel Kunčický (simulace, nastavení clk)
+* Petr Mička      (debug, video editor)
+* Jan Lakomý      (debug, github odborník)
 
 ### Obsah
 
@@ -20,7 +20,7 @@
 <a name="objectives"></a>
 
 ## Cíl projektu
-Cílem projektu je zobrazit na 7-segmentových displejích běžící text. Toho bude dosaženo pomocí posuvného registru (shift array), který vždy po nastavené době posune obsah registru o jeden znak.
+Cílem projektu je zobrazit na 7-segmentových displejích běžící text. Využijeme k tomu posuvný registr (shift array), který vždy po nastavené době posune obsah registru o jeden znak.
 
 <a name="hardware"></a>
 
@@ -32,9 +32,11 @@ kompletní platforma pro vývoj digitálních obvodů. Využívá FPGA Artix-7. 
 <a name="modules"></a>
 
 ## VHDL popis modulů a simulace
+V projektu jsou z velké části využity ukázkové moduly z hodin počítačového cvičení.
+
 ### 7-seg display driver
-Tento modul slouží k zobrazování znaků na displeji. Jako vstup mu slouží 32bit pole (data_i), které zajišťuje shift_array.
-K aktualizaci hodnot jednotlivých displejů dochází postupně a jejich výběr probíhá pomocí 3bit čítače.
+Slouží k zobrazování znaků na displeji. Jako vstup mu slouží 32bit pole (data_i), které získá od shift_array.
+K aktualizaci hodnot jednotlivých displejů dochází postupně (0-7) a jejich výběr probíhá pomocí 3bit čítače, kdy každý displej má přiřazeno vlastní číslo.
 
 Odkaz na kód: [driver_7seg_8digits](https://github.com/secretnameis/scrolling_7seg/blob/main/project_3/project_3.srcs/sources_1/new/driver_7seg_4digits.vhd)
 
@@ -52,9 +54,9 @@ Odkaz na kód: [shift_array](https://github.com/secretnameis/scrolling_7seg/blob
 
 ### clock_enable
 #### 1.clock
-První instace clock_enable poskytuje s_en1 signál čítači a tím řídí obnovovací frekvenci displeje. Čím je g_MAX nižší, tím rychleji se všech 8 displejů přepíše.
+První instace clock_enable poskytuje s_en1 signál čítači a tím řídí obnovovací frekvenci displeje. Čím je g_MAX nižší, tím rychleji se všech 8 displejů přepíše. Vždy se přepisuje pouze jeden z displejů.
 #### 2.clock
-Druhá instance hodin slouží pro posun znaků v shift_array. Čím vyšší, tím pomaleji se bude zpráva posouvat.
+Druhá instance hodin slouží pro posun znaků v shift_array. Čím vyšší g_MAX, tím pomaleji se bude zpráva posouvat.
 
 Odkaz na kód: [clock_enable](https://github.com/secretnameis/scrolling_7seg/blob/main/project_3/project_3.srcs/sources_1/new/clock_enable.vhd)
 
@@ -70,7 +72,7 @@ Odkaz na kód: [cnt_up_down](https://github.com/secretnameis/scrolling_7seg/blob
 
 ### hex_7seg
 Dekóduje dodané hex_i hodnoty a překládá je na 8bit binární kód (seg_o), který pak buď zapne daný segment (0) nebo vypne (1).
-Například x"6" == "0100000"
+Například x"6" == "0100000" zobrazí na displeji číslo 6.
 
 Odkaz na kód: [hex_7seg](https://github.com/secretnameis/scrolling_7seg/blob/main/project_3/project_3.srcs/sources_1/new/hex_7seg.vhd)
 
