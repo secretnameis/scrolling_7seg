@@ -36,7 +36,7 @@ V projektu jsou z velké části využity ukázkové moduly z hodin počítačov
 
 ### 7-seg display driver
 Slouží k zobrazování znaků na displeji. Jako vstup mu slouží 32bit pole (data_i), které získá od shift_array.
-K aktualizaci hodnot jednotlivých displejů dochází postupně (0-7) a jejich výběr probíhá pomocí 3bit čítače, kdy každý displej má přiřazeno vlastní číslo.
+K aktualizaci hodnot jednotlivých displejů dochází postupně (7-,) a jejich výběr probíhá pomocí 3bit čítače, kdy každý displej má přiřazeno vlastní číslo.
 
 Odkaz na kód: [driver_7seg_8digits](https://github.com/secretnameis/scrolling_7seg/blob/main/project_3/project_3.srcs/sources_1/new/driver_7seg_4digits.vhd)
 
@@ -44,7 +44,7 @@ testbench: [tp_driver_7seg_8digits](https://github.com/secretnameis/scrolling_7s
 
 
 ### shift_array
-Shift array zajišťuje posouvání znaků. Posun je řízen druhou instancí hodin, která je pomalejší. Při resetu si načte zprávu, kterou chceme zobrazit, do 64bit pole a poté při každém enable signálu posune obsah o 4 bity.
+Shift array zajišťuje "běhání" zobrazované zprávy. Posun je řízen druhou instancí hodin, která je pomalejší. Při resetu si načte zprávu, kterou chceme zobrazit, do 64bit pole a poté při každém s_en2 signálu posune obsah o 4 bity.
 
 Odkaz na kód: [shift_array](https://github.com/secretnameis/scrolling_7seg/blob/main/project_3/project_3.srcs/sources_1/new/shift_array.vhd)
    
@@ -56,7 +56,7 @@ Odkaz na kód: [shift_array](https://github.com/secretnameis/scrolling_7seg/blob
 #### 1.clock
 První instace clock_enable poskytuje s_en1 signál čítači a tím řídí obnovovací frekvenci displeje. Čím je g_MAX nižší, tím rychleji se všech 8 displejů přepíše. Vždy se přepisuje pouze jeden z displejů.
 #### 2.clock
-Druhá instance hodin slouží pro posun znaků v shift_array. Čím vyšší g_MAX, tím pomaleji se bude zpráva posouvat.
+Druhá instance clock_enable slouží k aktivaci posunu znaků v shift_array. Čím vyšší g_MAX, tím pomaleji se bude zpráva posouvat.
 
 Odkaz na kód: [clock_enable](https://github.com/secretnameis/scrolling_7seg/blob/main/project_3/project_3.srcs/sources_1/new/clock_enable.vhd)
 
