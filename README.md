@@ -40,7 +40,7 @@ K aktualizaci hodnot jednotlivých displejů dochází postupně (7-0) a jejich 
 
 Odkaz na kód: [driver_7seg_8digits](https://github.com/secretnameis/scrolling_7seg/blob/main/project_3/project_3.srcs/sources_1/new/driver_7seg_4digits.vhd)
 
-testbench: [tp_driver_7seg_8digits](https://github.com/secretnameis/scrolling_7seg/blob/main/project_3/project_3.srcs/sim_1/new/tb_driver_7seg_4digits.vhd)
+Testbench: [tp_driver_7seg_8digits](https://github.com/secretnameis/scrolling_7seg/blob/main/project_3/project_3.srcs/sim_1/new/tb_driver_7seg_4digits.vhd)
 
 
 ### shift_array
@@ -105,5 +105,5 @@ Odkaz: [top.bit](https://github.com/secretnameis/scrolling_7seg/blob/main/projec
 ## Zdroje
 
 1. Moduly z hodin
-2. shift array: [youtube.com/watch?v=V6YUEPRc64M](https://www.youtube.com/watch?v=V6YUEPRc64M)
-3. popis desky [digilent.com/reference](https://digilent.com/reference/programmable-logic/nexys-a7/reference-manual?redirect=1)
+2. Shift array: [youtube.com/watch?v=V6YUEPRc64M](https://www.youtube.com/watch?v=V6YUEPRc64M)
+3. Popis desky: [digilent.com/reference](https://digilent.com/reference/programmable-logic/nexys-a7/reference-manual?redirect=1)
