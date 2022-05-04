@@ -32,7 +32,7 @@ kompletní platforma pro vývoj digitálních obvodů. Využívá FPGA Artix-7. 
 <a name="modules"></a>
 
 ## VHDL popis modulů a simulace
-V projektu jsou z velké části využity ukázkové moduly z hodin počítačového cvičení.
+V projektu jsou využity ukázkové moduly z hodin počítačového cvičení.
 
 ### 7-seg display driver
 Slouží k zobrazování znaků na displeji. Jako vstup mu slouží 32bit pole (data_i), které získá od shift_array.
