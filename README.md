@@ -48,7 +48,7 @@ Shift array zajišťuje "běhání" zobrazované zprávy. Posun je řízen druho
 
 Odkaz na kód: [shift_array](https://github.com/secretnameis/scrolling_7seg/blob/main/project_3/project_3.srcs/sources_1/new/shift_array.vhd)
    
-   testbench: [tb_shift_array](https://github.com/secretnameis/scrolling_7seg/blob/main/project_3/project_3.srcs/sim_1/new/tb_shift_array.vhd)
+   Testbench: [tb_shift_array](https://github.com/secretnameis/scrolling_7seg/blob/main/project_3/project_3.srcs/sim_1/new/tb_shift_array.vhd)
    
    ![shift_simulace](images/shift_simulation.PNG)
 
