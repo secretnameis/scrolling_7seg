@@ -43,7 +43,7 @@ Odkaz na kód: [driver_7seg_8digits](https://github.com/secretnameis/scrolling_7
 Testbench: [tp_driver_7seg_8digits](https://github.com/secretnameis/scrolling_7seg/blob/main/project_3/project_3.srcs/sim_1/new/tb_driver_7seg_4digits.vhd)
 
 
-### shift_array
+### Shift_array
 Shift array zajišťuje "běhání" zobrazované zprávy. Posun je řízen druhou instancí hodin, která je pomalejší. Při resetu si načte zprávu, kterou chceme zobrazit, do 64bit pole a poté při každém s_en2 signálu posune obsah o 4 bity.
 
 Odkaz na kód: [shift_array](https://github.com/secretnameis/scrolling_7seg/blob/main/project_3/project_3.srcs/sources_1/new/shift_array.vhd)
@@ -52,7 +52,7 @@ Odkaz na kód: [shift_array](https://github.com/secretnameis/scrolling_7seg/blob
    
    ![shift_simulace](images/shift_simulation.PNG)
 
-### clock_enable
+### Clock_enable
 #### 1.clock
 První instace clock_enable poskytuje s_en1 signál čítači a tím řídí obnovovací frekvenci displeje. Čím je g_MAX nižší, tím rychleji se všech 8 displejů přepíše. Vždy se přepisuje pouze jeden z displejů.
 #### 2.clock
@@ -62,7 +62,7 @@ Odkaz na kód: [clock_enable](https://github.com/secretnameis/scrolling_7seg/blo
 
 ![clk](images/clk.PNG)
 
-### cnt_up_down
+### Cnt_up_down
 Čítač slouží k výběru displeje. Při resetu se vynuluje a poté vždy při vzestupné hraně CLK čítá dle nastavené velikosti (g_CNT_WIDTH=3) tedy od 7 do 0.
 
 Odkaz na kód: [cnt_up_down](https://github.com/secretnameis/scrolling_7seg/blob/main/project_3/project_3.srcs/sources_1/new/cnt_up_down.vhd)
@@ -70,7 +70,7 @@ Odkaz na kód: [cnt_up_down](https://github.com/secretnameis/scrolling_7seg/blob
 ![cnt](images/counter.PNG)
 
 
-### hex_7seg
+### Hex_7seg
 Dekóduje dodané hex_i hodnoty a překládá je na 8bit binární kód (seg_o), který pak buď zapne daný segment (0) nebo vypne (1).
 Například x"6" == "0100000" zobrazí na displeji číslo 6.
 
@@ -96,9 +96,9 @@ Odkaz: [top.bit](https://github.com/secretnameis/scrolling_7seg/blob/main/projec
 
 <a name="video"></a>
 
-## Video
+## Videoprezentace
 
-[Videoprezentace](https://drive.google.com/file/d/1ozr-5tpLP53XEPmy0LyffFDvKVfrevRT/view?usp=sharing)
+[Video](https://drive.google.com/file/d/1ozr-5tpLP53XEPmy0LyffFDvKVfrevRT/view?usp=sharing)
 
 <a name="references"></a>
 
