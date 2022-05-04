@@ -53,9 +53,9 @@ Odkaz na kód: [shift_array](https://github.com/secretnameis/scrolling_7seg/blob
    ![shift_simulace](images/shift_simulation.PNG)
 
 ### Clock_enable
-#### 1.clock
+#### 1. hodiny
 První instace clock_enable poskytuje s_en1 signál čítači a tím řídí obnovovací frekvenci displeje. Čím je g_MAX nižší, tím rychleji se všech 8 displejů přepíše. Vždy se přepisuje pouze jeden z displejů.
-#### 2.clock
+#### 2. hodiny
 Druhá instance clock_enable slouží k aktivaci posunu znaků v shift_array. Čím vyšší g_MAX, tím pomaleji se bude zpráva posouvat.
 
 Odkaz na kód: [clock_enable](https://github.com/secretnameis/scrolling_7seg/blob/main/project_3/project_3.srcs/sources_1/new/clock_enable.vhd)
